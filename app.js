@@ -14,6 +14,7 @@ const productRouter = require('./routes/productRoutes')
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
 
+// Allows access to req.body
 app.use(express.json())
 
 app.get('/', (req, res) => {
