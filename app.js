@@ -25,7 +25,7 @@ app.use(express.static('./public'))
 // Allows access to req.body
 app.use(express.json())
 
-app.use(fileUpload())
+app.use(fileUpload({ useTempFiles: true }))
 
 app.get('/', (req, res) => {
   res.send('<h1>File Upload Starter</h1>')
